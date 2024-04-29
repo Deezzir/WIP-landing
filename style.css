@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Silkscreen&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: white;
+    background: black;
+    font-family: 'roboto', sans-serif;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.title .heading {
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Silkscreen', cursive;
+}
+
+.nav {
+    padding: 3em 2em;
+    text-align: center;
+}
+
+.link {
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 10px;
+    position: relative;
+}
+
+.links-container * {
+    display: inline-block;
+}
+
+.link:before,
+.link:after {
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.3s;
+}
+
+.link:before {
+    left: 0px;
+    top: 0px;
+}
+
+.link:after {
+    right: 0px;
+    bottom: 0px;
+}
+
+.link:hover:before,
+.link:hover:after {
+    opacity: 1;
+    width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    html {
+        font-size: 10px;
+    }
+}
